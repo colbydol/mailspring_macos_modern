@@ -1,0 +1,100 @@
+@import "ui-variables";
+
+// ============================================
+// macOS Modern Components & Polish
+// ============================================
+
+// Global Typography & Antialiasing
+body {
+  font-family: @font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: @text-color;
+  background-color: @background-primary;
+}
+
+// macOS Clean Overlay Scrollbars
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.28);
+  }
+}
+
+// Mailspring Swipe Actions
+.swipe-item-action {
+  &.swipe-action-archive {
+    background-color: @swipe-archive;
+  }
+  &.swipe-action-snooze {
+    background-color: @swipe-snooze;
+  }
+  &.swipe-action-trash {
+    background-color: @swipe-trash;
+  }
+}
+
+// Modals and Popovers
+.popover,
+.menu.dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid @border-color-primary;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 5px;
+
+  .menu-item {
+    border-radius: 5px;
+    font-size: 13px;
+    color: @text-color;
+    padding: 5px 10px;
+
+    &:hover,
+    &.selected {
+      background-color: @apple-blue;
+      color: #ffffff;
+    }
+  }
+}
+
+// Clean Mail Labels / Badges
+.mail-label {
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 1px 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+// Preferences Dialog
+.preferences-wrap {
+  background-color: #ffffff;
+  color: @text-color;
+
+  .tabs-and-header {
+    background-color: @sidebar-background;
+    border-bottom: 1px solid @border-color-primary;
+  }
+
+  .btn {
+    border-radius: 6px;
+  }
+}
+
+// Activity / Sync Notifications
+.notifications {
+  box-shadow: none;
+  border-top: 1px solid @border-color-primary;
+  background-color: @sidebar-background;
+}

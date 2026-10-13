@@ -1,0 +1,53 @@
+@import "ui-variables";
+
+// ============================================
+// macOS Native Traffic Lights
+// ============================================
+
+.toolbar-window-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  gap: 8px;
+  min-width: 68px;
+
+  button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: opacity 150ms ease, filter 150ms ease;
+
+    &.close {
+      background-color: @apple-traffic-red;
+      border: 1px solid darken(@apple-traffic-red, 8%);
+    }
+
+    &.minimize {
+      background-color: @apple-traffic-yellow;
+      border: 1px solid darken(@apple-traffic-yellow, 8%);
+    }
+
+    &.maximize {
+      background-color: @apple-traffic-green;
+      border: 1px solid darken(@apple-traffic-green, 8%);
+    }
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+}
+
+// Window Inactive State
+body.is-blurred {
+  .toolbar-window-controls button {
+    background-color: #dcdce0 !important;
+    border-color: #ceced2 !important;
+  }
+}

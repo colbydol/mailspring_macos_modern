@@ -1,0 +1,26 @@
+{
+  "name": "mailspring-macos-modern",
+  "displayName": "macOS Modern",
+  "title": "macOS Modern",
+  "theme": "ui",
+  "version": "1.0.0",
+  "description": "A refined, native Apple Mail light theme for Mailspring featuring modern typography, frosted sidebars, and clean macOS aesthetics.",
+  "license": "MIT",
+  "engines": {
+    "mailspring": "*"
+  },
+  "main": "styles/index.less",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colbydolly/mailspring-macos-modern.git"
+  },
+  "keywords": [
+    "mailspring",
+    "mailspring-theme",
+    "macos",
+    "apple-mail",
+    "light",
+    "modern"
+  ],
+  "author": "Colby Dolly <colbydol@gmail.com>"
+}

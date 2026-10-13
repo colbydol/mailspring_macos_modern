@@ -1,0 +1,135 @@
+@import "ui-variables";
+
+// ============================================
+// macOS Modern Thread List
+// ============================================
+
+.column-ThreadList {
+  background-color: @threadlist-bg;
+  border-right: 1px solid @border-color-primary;
+}
+
+.thread-list {
+  background-color: @threadlist-bg;
+
+  .list-item {
+    border-bottom: 1px solid @border-color-primary;
+    background-color: #ffffff;
+    transition: background-color 100ms ease;
+    padding: 10px 14px;
+    margin: 0;
+
+    &:hover:not(.selected) {
+      background-color: @list-hover-bg;
+    }
+
+    // Unread Indicator
+    .thread-icon.thread-icon-unread {
+      background-image: none !important;
+      background-color: @apple-blue !important;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      margin-top: 5px;
+    }
+
+    // Star Icon
+    .thread-icon.thread-icon-star {
+      color: @accent-warning;
+      filter: saturate(1.2);
+    }
+
+    // Typography
+    .participants {
+      font-size: 13px;
+      font-weight: 600;
+      color: @text-color;
+    }
+
+    .subject {
+      font-size: 13px;
+      font-weight: 500;
+      color: @text-color;
+      margin-top: 1px;
+    }
+
+    .snippet {
+      font-size: 12px;
+      color: @text-color-subtle;
+      line-height: 1.35;
+      margin-top: 2px;
+    }
+
+    .timestamp {
+      font-size: 11px;
+      color: @text-color-very-subtle;
+      font-weight: 400;
+    }
+
+    // Unread thread styling
+    &.unread {
+      .participants {
+        font-weight: 700;
+      }
+      .subject {
+        font-weight: 600;
+      }
+    }
+
+    // Selected Row (Native macOS Mail Blue)
+    &.selected,
+    &.focused {
+      background-color: @apple-blue !important;
+      color: #ffffff !important;
+
+      .participants,
+      .subject,
+      .snippet,
+      .timestamp {
+        color: #ffffff !important;
+      }
+
+      .snippet {
+        opacity: 0.88;
+      }
+
+      .timestamp {
+        opacity: 0.78;
+      }
+
+      .thread-icon.thread-icon-unread {
+        background-color: #ffffff !important;
+      }
+
+      img.content-mask {
+        background-color: #ffffff !important;
+      }
+    }
+  }
+}
+
+// Window blurred selection state (macOS inactive gray)
+body.is-blurred {
+  .thread-list .list-item.selected,
+  .thread-list .list-item.focused {
+    background-color: #dcdce0 !important;
+    color: @text-color !important;
+
+    .participants,
+    .subject,
+    .snippet,
+    .timestamp {
+      color: @text-color !important;
+    }
+
+    .snippet,
+    .timestamp {
+      color: @text-color-subtle !important;
+      opacity: 1;
+    }
+
+    .thread-icon.thread-icon-unread {
+      background-color: @apple-blue !important;
+    }
+  }
+}

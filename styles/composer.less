@@ -1,0 +1,92 @@
+@import "ui-variables";
+
+// ============================================
+// macOS Modern Composer
+// ============================================
+
+.composer-outer-wrap {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+  .composer-inner-wrap {
+    background-color: #ffffff;
+  }
+
+  // Header Inputs (To, Cc, Bcc, Subject)
+  .composer-header {
+    border-bottom: 1px solid @border-color-primary;
+
+    .composer-field {
+      border-bottom: 1px solid fade(@border-color-primary, 60%);
+      padding: 6px 14px;
+      font-size: 13px;
+
+      label {
+        color: @text-color-subtle;
+        font-weight: 500;
+        width: 60px;
+      }
+
+      input {
+        color: @text-color;
+        background: transparent;
+        font-size: 13px;
+      }
+    }
+
+    // Tokenized Recipient Pills
+    .tokenizing-field .token {
+      background-color: rgba(0, 122, 255, 0.1);
+      color: @apple-blue;
+      border: 1px solid rgba(0, 122, 255, 0.2);
+      border-radius: 12px;
+      padding: 1px 8px;
+      font-size: 12px;
+      font-weight: 500;
+
+      &.selected {
+        background-color: @apple-blue;
+        color: #ffffff;
+      }
+    }
+  }
+
+  // Formatting Toolbar
+  .composer-action-bar {
+    background-color: @toolbar-background-color;
+    border-top: 1px solid @border-color-primary;
+    padding: 6px 12px;
+
+    .btn.btn-toolbar {
+      opacity: 0.75;
+      border-radius: 5px;
+
+      &:hover {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    // Native Apple Blue Send Button
+    .btn-send {
+      background-color: @apple-blue !important;
+      color: #ffffff !important;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 5px 16px;
+      border: none;
+      box-shadow: 0 1px 2px rgba(0, 122, 255, 0.3);
+      transition: background-color 120ms ease, box-shadow 120ms ease;
+
+      &:hover {
+        background-color: @apple-blue-hover !important;
+        box-shadow: 0 2px 4px rgba(0, 122, 255, 0.4);
+      }
+
+      &:active {
+        background-color: @apple-blue-active !important;
+      }
+    }
+  }
+}

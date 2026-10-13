@@ -1,0 +1,115 @@
+@import "ui-variables";
+
+// ============================================
+// macOS Modern Sidebar
+// ============================================
+
+.column-RootSidebar,
+.account-sidebar,
+.toolbar-RootSidebar {
+  background-color: @sidebar-background;
+  border-right: 1px solid @border-color-primary;
+  -webkit-font-smoothing: antialiased;
+}
+
+.account-sidebar {
+  position: relative;
+  padding: 8px 10px;
+  user-select: none;
+
+  .heading {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: @text-color-very-subtle;
+    margin: 14px 8px 6px 8px;
+    padding: 0;
+  }
+
+  .item {
+    font-size: 13px;
+    font-weight: 400;
+    color: @text-color;
+    padding: 5px 8px;
+    border-radius: 6px;
+    margin-bottom: 2px;
+    transition: background-color 120ms ease, color 120ms ease;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+
+    &.selected {
+      background-color: rgba(0, 122, 255, 0.14);
+      color: @apple-blue;
+      font-weight: 500;
+
+      img.content-mask {
+        background-color: @apple-blue !important;
+      }
+
+      .item-count {
+        background-color: @apple-blue;
+        color: #ffffff;
+      }
+    }
+
+    img.content-mask {
+      background-color: @text-color-subtle;
+      margin-right: 8px;
+      transition: background-color 120ms ease;
+    }
+
+    .item-count {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 1px 7px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.06);
+      color: @text-color-subtle;
+      margin-left: auto;
+    }
+  }
+
+  .add-item-button {
+    margin-top: 6px;
+    opacity: 0.6;
+    transition: opacity 150ms ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// Account Switcher
+.account-sidebar .account-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: opacity 150ms ease, background-color 150ms ease;
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+}
+
+// Disclosure Arrow
+.account-sidebar .disclosure-triangle {
+  width: 14px;
+  display: flex;
+  align-items: center;
+
+  div {
+    border-left-color: @text-color-very-subtle;
+    border-top-width: 3.5px;
+    border-bottom-width: 3.5px;
+    border-left-width: 5px;
+  }
+}

@@ -1,0 +1,122 @@
+@import "ui-variables";
+
+// ============================================
+// macOS Modern Toolbar & Search
+// ============================================
+
+.sheet-toolbar {
+  background-color: @toolbar-background-color;
+  border-bottom: 1px solid @border-color-primary;
+  box-shadow: none;
+  height: 44px;
+}
+
+.toolbar-ThreadList,
+.toolbar-MessageList,
+.toolbar-MessageListSidebar {
+  background-color: @toolbar-background-color;
+  border-bottom: 1px solid @border-color-primary;
+  border-left: 1px solid @border-color-primary;
+}
+
+// Action Buttons
+.sheet-toolbar .btn.btn-toolbar {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 6px;
+  margin: 0 2px;
+  color: @text-color;
+  opacity: 0.8;
+  transition: opacity 120ms ease, background-color 120ms ease;
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &.btn-emphasis {
+    background-color: @apple-blue;
+    color: #ffffff;
+    opacity: 1;
+
+    img.content-mask {
+      background-color: #ffffff !important;
+    }
+
+    &:hover {
+      background-color: @apple-blue-hover;
+    }
+  }
+
+  img.content-mask {
+    background-color: @text-color;
+  }
+}
+
+// Compose Button in Sidebar Header
+.sheet-toolbar .btn.btn-toolbar.item-compose {
+  background: transparent;
+  border-radius: 6px;
+  opacity: 0.85;
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+
+  img.content-mask {
+    background-color: @apple-blue;
+  }
+}
+
+// macOS Capsule Search Bar
+.search-bar {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 7px;
+  transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  &.focused,
+  &:focus-within {
+    background: #ffffff;
+    border-color: @apple-blue;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.18);
+  }
+
+  input {
+    font-size: 13px;
+    color: @text-color;
+    background: transparent;
+
+    &::placeholder {
+      color: @text-color-very-subtle;
+    }
+  }
+
+  .search-icon {
+    opacity: 0.5;
+  }
+}
+
+// Window Blurred State
+body.is-blurred {
+  .sheet-toolbar,
+  .toolbar-ThreadList,
+  .toolbar-MessageList {
+    background-color: #fbfbfb;
+    opacity: 0.95;
+  }
+
+  .sheet-toolbar .btn.btn-toolbar {
+    opacity: 0.5;
+  }
+}
