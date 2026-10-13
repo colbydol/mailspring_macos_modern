@@ -12,7 +12,7 @@
   "main": "styles/index.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/colbydolly/mailspring-macos-modern.git"
+    "url": "https://github.com/colbydol/mailspring_macos_modern.git"
   },
   "keywords": [
     "mailspring",
